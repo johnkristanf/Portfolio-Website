@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Navbar from '@/components/navbar'
 import ContactSection from '@/components/contact'
+import { handleNavClick } from '@/lib/utils'
 
 export default function Home() {
     const [isClient, setIsClient] = useState(false)
@@ -96,10 +97,16 @@ export default function Home() {
                         year of freelance experience and a portfolio of personal projects
                     </p>
                     <div className="space-x-4">
-                        <button className="bg-gradient-to-r from-violet-600 to-purple-600 px-8 py-3 rounded-full font-semibold hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 animate-glow">
+                        <button
+                            onClick={(e) => handleNavClick(e, '/projects', setIsNavigating)}
+                            className="bg-gradient-to-r from-violet-600 to-purple-600 px-8 py-3 rounded-full font-semibold hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 animate-glow"
+                        >
                             View My Work
                         </button>
-                        <button className="border-2 border-violet-600 px-8 py-3 rounded-full font-semibold hover:bg-violet-600 transition-all duration-300 transform hover:scale-105">
+                        <button
+                            onClick={(e) => handleNavClick(e, '/contact', setIsNavigating)}
+                            className="border-2 border-violet-600 px-8 py-3 rounded-full font-semibold hover:bg-violet-600 transition-all duration-300 transform hover:scale-105"
+                        >
                             Get In Touch
                         </button>
                     </div>
@@ -352,8 +359,6 @@ export default function Home() {
                                 </a>
                             </div>
                         </div>
-
-                        
                     </div>
                 </div>
             </section>

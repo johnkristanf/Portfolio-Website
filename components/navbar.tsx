@@ -1,4 +1,5 @@
-import { Dispatch, SetStateAction } from "react"
+import { handleNavClick } from "@/lib/utils"
+import { Dispatch, SetStateAction } from 'react'
 
 export default function Navbar({
     setIsNavigating,
@@ -6,23 +7,7 @@ export default function Navbar({
     setIsNavigating: Dispatch<SetStateAction<boolean>>
 }) {
     // Handle manual navigation clicks
-    const handleNavClick = (e: any, href: string) => {
-        e.preventDefault()
-        setIsNavigating(true)
-
-        // Then scroll to the section
-        setTimeout(() => {
-            const sectionId = href === '/' ? 'home' : href.slice(1)
-            const section = document.getElementById(sectionId)
-            if (section) {
-                section.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                })
-            }
-            setTimeout(() => setIsNavigating(false), 1000)
-        }, 100)
-    }
+   
 
     return (
         <nav className="fixed top-0 w-full z-50 glass-effect">
@@ -34,35 +19,35 @@ export default function Navbar({
                     <div className="hidden md:flex space-x-8">
                         <a
                             href="/"
-                            onClick={(e) => handleNavClick(e, '/')}
+                            onClick={(e) => handleNavClick(e, '/', setIsNavigating)}
                             className={`hover:text-violet-400 transition-colors duration-300 `}
                         >
                             Home
                         </a>
                         <a
                             href="/about"
-                            onClick={(e) => handleNavClick(e, '/about')}
+                            onClick={(e) => handleNavClick(e, '/about', setIsNavigating)}
                             className={`hover:text-violet-400 transition-colors duration-300 $`}
                         >
                             About
                         </a>
                         <a
                             href="/skills"
-                            onClick={(e) => handleNavClick(e, '/skills')}
+                            onClick={(e) => handleNavClick(e, '/skills', setIsNavigating)}
                             className={`hover:text-violet-400 transition-colors duration-300 `}
                         >
                             Skills
                         </a>
                         <a
                             href="/projects"
-                            onClick={(e) => handleNavClick(e, '/projects')}
+                            onClick={(e) => handleNavClick(e, '/projects', setIsNavigating)}
                             className={`hover:text-violet-400 transition-colors duration-300 `}
                         >
                             Projects
                         </a>
                         <a
                             href="/contact"
-                            onClick={(e) => handleNavClick(e, '/contact')}
+                            onClick={(e) => handleNavClick(e, '/contact', setIsNavigating)}
                             className={`hover:text-violet-400 transition-colors duration-300 `}
                         >
                             Contact
