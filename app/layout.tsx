@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: 'John Kristan.Dev',
     description: 'John Kristan Web Development Portfolio',
+    icons: {
+        icon: '/favicon.ico',
+    },
 }
 
 export default function RootLayout({

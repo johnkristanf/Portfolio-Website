@@ -6,7 +6,7 @@ export default function Navbar({
     setIsNavigating: Dispatch<SetStateAction<boolean>>
 }) {
     // Handle manual navigation clicks
-    const handleNavClick = (e, href) => {
+    const handleNavClick = (e: any, href: string) => {
         e.preventDefault()
         setIsNavigating(true)
 

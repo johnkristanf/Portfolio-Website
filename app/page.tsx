@@ -11,7 +11,6 @@ export default function Home() {
 
     // Add state to prevent rapid route changes
     const [isNavigating, setIsNavigating] = useState(false)
-    const [currentSection, setCurrentSection] = useState('home')
 
     const handleRouteNavigation = useCallback(() => {
         const currentPath = pathname
@@ -53,98 +52,18 @@ export default function Home() {
 
         window.addEventListener('scroll', handleScroll)
 
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px',
-        }
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1'
-                    entry.target.style.transform = 'translateY(0)'
-                }
-            })
-        }, observerOptions)
-
-        // Observe elements for animation
-        document.querySelectorAll('.animate-slide-up, .tech-card').forEach((el) => {
-            el.style.opacity = '0'
-            el.style.transform = 'translateY(30px)'
-            el.style.transition = 'all 0.6s ease-out'
-            observer.observe(el)
-        })
-
-        // Route observer with improved settings
-        const routeObserverOptions = {
-            threshold: 0.5, // Section needs to be 50% visible
-            rootMargin: '-20% 0px -20% 0px', // More margin to prevent rapid switching
-        }
-
-        const routeObserver = new IntersectionObserver((entries) => {
-            // Don't update routes if we're currently navigating programmatically
-            if (isNavigating) return
-
-            let mostVisibleEntry = null
-            let maxIntersectionRatio = 0
-
-            // Find the most visible section
-            entries.forEach((entry) => {
-                if (entry.isIntersecting && entry.intersectionRatio > maxIntersectionRatio) {
-                    maxIntersectionRatio = entry.intersectionRatio
-                    mostVisibleEntry = entry
-                }
-            })
-
-            if (mostVisibleEntry) {
-                const sectionId = mostVisibleEntry.target.id
-                const newRoute = sectionId === 'home' ? '/' : `/${sectionId}`
-
-                // Only update if the route is different and we have a significant intersection
-                if (pathname !== newRoute && maxIntersectionRatio > 0.5) {
-                    setCurrentSection(sectionId)
-                }
-            }
-        }, routeObserverOptions)
-
-        // Wait for DOM to be ready before observing sections
-        const setupSectionObserver = () => {
-            const sections = document.querySelectorAll('section[id]')
-            if (sections.length > 0) {
-                sections.forEach((section) => {
-                    routeObserver.observe(section)
-                })
-            } else {
-                // Retry if sections aren't found yet
-                setTimeout(setupSectionObserver, 100)
-            }
-        }
-
-        // Setup section observer after a short delay to ensure DOM is ready
-        setTimeout(setupSectionObserver, 200)
-
-        // Check if we need to navigate to a specific section on load
-        if (pathname !== '/') {
-            handleRouteNavigation()
-        }
-
         // Cleanup function
         return () => {
             window.removeEventListener('scroll', handleScroll)
-            observer.disconnect()
-            routeObserver.disconnect()
         }
     }, [pathname, isNavigating, handleRouteNavigation])
 
-   
     if (!isClient) {
         return null // or a loading spinner
     }
 
     return (
         <>
-            
             <Navbar setIsNavigating={setIsNavigating} />
             <section
                 id="home"
@@ -434,67 +353,12 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="glass-effect rounded-2xl overflow-hidden tech-card">
-                            <div className="h-48 bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">
-                                <span className="text-6xl">📊</span>
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold mb-2 text-violet-400">
-                                    Analytics Dashboard
-                                </h3>
-                                <p className="text-gray-300 mb-4">
-                                    Real-time data visualization dashboard using Python and
-                                    PostgreSQL.
-                                </p>
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    <span className="px-3 py-1 bg-green-600 rounded-full text-xs">
-                                        Python
-                                    </span>
-                                    <span className="px-3 py-1 bg-blue-600 rounded-full text-xs">
-                                        PostgreSQL
-                                    </span>
-                                    <span className="px-3 py-1 bg-teal-600 rounded-full text-xs">
-                                        Supabase
-                                    </span>
-                                </div>
-                                <button className="text-violet-400 hover:text-violet-300 font-semibold">
-                                    View Project →
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="glass-effect rounded-2xl overflow-hidden tech-card">
-                            <div className="h-48 bg-gradient-to-br from-green-600 to-teal-600 flex items-center justify-center">
-                                <span className="text-6xl">🌐</span>
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold mb-2 text-violet-400">
-                                    SaaS Application
-                                </h3>
-                                <p className="text-gray-300 mb-4">
-                                    Multi-tenant SaaS platform with advanced user management.
-                                </p>
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    <span className="px-3 py-1 bg-yellow-600 rounded-full text-xs">
-                                        JavaScript
-                                    </span>
-                                    <span className="px-3 py-1 bg-red-600 rounded-full text-xs">
-                                        PHP
-                                    </span>
-                                    <span className="px-3 py-1 bg-orange-600 rounded-full text-xs">
-                                        MySQL
-                                    </span>
-                                </div>
-                                <button className="text-violet-400 hover:text-violet-300 font-semibold">
-                                    View Project →
-                                </button>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </section>
 
-           <ContactSection />
+            <ContactSection />
 
             <footer className="py-8 bg-gray-900 text-center">
                 <p className="text-gray-400">
