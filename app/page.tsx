@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import Navbar from '@/components/navbar'
 import ContactSection from '@/components/contact'
 import { handleNavClick } from '@/lib/utils'
+import SocialMedia from '@/components/social-media'
 
 export default function Home() {
     const [isClient, setIsClient] = useState(false)
@@ -68,7 +69,7 @@ export default function Home() {
             <Navbar setIsNavigating={setIsNavigating} />
             <section
                 id="home"
-                className="min-h-screen flex items-center justify-center relative overflow-hidden"
+                className="min-h-screen flex items-center justify-center relative overflow-hidden mt-5"
             >
                 <div className="absolute inset-0">
                     <div className="absolute top-20 left-10 w-72 h-72 bg-violet-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -89,13 +90,14 @@ export default function Home() {
                             <span className="gradient-text">John Kristan Torremocha</span>
                         </h1>
                         <h2 className="text-2xl md:text-4xl font-semibold text-white mb-6">
-                            Backend Developer
+                            Junior Web Developer
                         </h2>
                     </div>
                     <p className="text-lg md:text-xl mb-8 text-gray-300 typing-animation max-w-2xl mx-auto">
                         Passionate entry-level developer crafting innovative web solutions with 1+
-                        year of freelance experience and a portfolio of personal projects
+                        year of web development experience and a portfolio of personal projects
                     </p>
+
                     <div className="space-x-4">
                         <button
                             onClick={(e) => handleNavClick(e, '/projects', setIsNavigating)}
@@ -110,6 +112,8 @@ export default function Home() {
                             Get In Touch
                         </button>
                     </div>
+
+                    <SocialMedia />
                 </div>
             </section>
 
@@ -137,7 +141,7 @@ export default function Home() {
                                 technologies, bringing ideas to life through clean, efficient code
                                 and intuitive user experiences. My journey in software development
                                 began with curiosity and has grown through hands-on experience
-                                building real-world applications. With a year of freelance work
+                                building real-world applications. With a year of web development experience
                                 under my belt, I've learned to tackle challenges head-on and deliver
                                 solutions that make a meaningful impact.
                             </p>
@@ -151,10 +155,7 @@ export default function Home() {
                                     <div className="text-3xl font-bold text-violet-400">1+</div>
                                     <div className="text-sm text-gray-400">Year Experience</div>
                                 </div>
-                                <div className="text-center">
-                                    <div className="text-3xl font-bold text-violet-400">2</div>
-                                    <div className="text-sm text-gray-400">Personal Projects</div>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>
