@@ -48,8 +48,8 @@
                     50% { transform: translateY(-20px); }
                 }
                 @keyframes glow {
-                    from { box-shadow: 0 0 20px #8b5cf6, 0 0 30px #8b5cf6, 0 0 40px #8b5cf6; }
-                    to { box-shadow: 0 0 30px #8b5cf6, 0 0 40px #8b5cf6, 0 0 50px #8b5cf6; }
+                    from { box-shadow: 0 0 10px #8b5cf6, 0 0 20px #8b5cf6, 0 0 30px #8b5cf6; }
+                    to { box-shadow: 0 0 20px #8b5cf6, 0 0 30px #8b5cf6, 0 0 40px #8b5cf6; }
                 }
                 @keyframes slide-up {
                     from { opacity: 0; transform: translateY(30px); }
