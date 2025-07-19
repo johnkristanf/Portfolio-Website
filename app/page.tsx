@@ -94,7 +94,7 @@ export default function Home() {
                         </h2>
                     </div>
                     <p className="text-lg md:text-xl mb-8 text-gray-300 typing-animation max-w-2xl mx-auto">
-                        Passionate entry-level developer crafting innovative web solutions with 1+
+                        Passionate junior-level developer crafting innovative web solutions with 1+
                         year of web development experience and a portfolio of personal projects
                     </p>
 
@@ -141,9 +141,9 @@ export default function Home() {
                                 technologies, bringing ideas to life through clean, efficient code
                                 and intuitive user experiences. My journey in software development
                                 began with curiosity and has grown through hands-on experience
-                                building real-world applications. With a year of web development experience
-                                under my belt, I've learned to tackle challenges head-on and deliver
-                                solutions that make a meaningful impact.
+                                building real-world applications. With a year of web development
+                                experience under my belt, I've learned to tackle challenges head-on
+                                and deliver solutions that make a meaningful impact.
                             </p>
                             <p className="text-lg text-gray-300 leading-relaxed">
                                 My journey in software development has equipped me with a diverse
@@ -155,7 +155,6 @@ export default function Home() {
                                     <div className="text-3xl font-bold text-violet-400">1+</div>
                                     <div className="text-sm text-gray-400">Year Experience</div>
                                 </div>
-                               
                             </div>
                         </div>
                     </div>
@@ -309,6 +308,7 @@ export default function Home() {
                         Featured Projects
                     </h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {/* TEACHFLOW */}
                         <div className="glass-effect rounded-2xl overflow-hidden tech-card">
                             <div className="h-52 flex items-center justify-center">
                                 <img
@@ -353,6 +353,60 @@ export default function Home() {
                                 </div>
                                 <a
                                     href="https://teach-flow.vercel.app/"
+                                    target="_blank"
+                                    className="text-violet-400 hover:text-violet-300 font-semibold"
+                                >
+                                    View Project →
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* NOTENEXUS */}
+                        <div className="glass-effect rounded-2xl overflow-hidden tech-card">
+                            <div className="h-52 flex items-center justify-center">
+                                <img
+                                    src="/img/notenexus.png"
+                                    alt="TeachFlow Project"
+                                    className="h-full w-full object-cover"
+                                />
+                            </div>
+                            <div className="p-6">
+                                <h3 className="text-xl font-bold mb-2 text-violet-400">
+                                    NoteNexus
+                                </h3>
+                                <p className="text-gray-300 mb-4">
+                                    Revolutionize personalized learning with our AI full-stack
+                                    project. Featuring an interactive, ChatGPT-like AI companion, it
+                                    enables dynamic digital sticky notes and intelligent extraction
+                                    of core learning concepts, driving deeper comprehension and
+                                    efficient study.
+                                </p>
+                                <div className="flex flex-wrap gap-2 mb-4">
+                                    <span className="px-3 py-1 bg-violet-600 rounded-full text-xs">
+                                        Next.js
+                                    </span>
+                                    <span className="px-3 py-1 bg-purple-600 rounded-full text-xs">
+                                        Python
+                                    </span>
+
+                                    <span className="px-3 py-1 bg-green-800 rounded-full text-xs">
+                                        OpenAI
+                                    </span>
+
+                                    <span className="px-3 py-1 bg-blue-600 rounded-full text-xs">
+                                        PostgreSQL
+                                    </span>
+
+                                    <span className="px-3 py-1 bg-orange-600 rounded-full text-xs">
+                                        LangChain
+                                    </span>
+
+                                    <span className="px-3 py-1 bg-pink-600 rounded-full text-xs">
+                                        AWS
+                                    </span>
+                                </div>
+                                <a
+                                    href="https://app.notenexus.it.com/"
                                     target="_blank"
                                     className="text-violet-400 hover:text-violet-300 font-semibold"
                                 >
