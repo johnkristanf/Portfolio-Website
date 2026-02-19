@@ -1,17 +1,48 @@
 export default function Projects() {
   const projects = [
     {
+      name: "Lexa Medical Laboratory",
+      description:
+        "A comprehensive laboratory management system featuring patient records, test result tracking, medical supply inventory, queue management, and online appointment scheduling.",
+      image: "/img/projects/lexa.png",
+      alt: "Lexa Medical Laboratory Project",
+      link: "https://lexa-medical-laboratory.it.com",
+      secondary_link: "https://lexa-medical-laboratory.it.com/services/appointment",
+      secondary_link_text: "View Appointment Link",
+      technologies_used: [
+        { name: "Laravel", badge_color: "bg-red-600" },
+        { name: "Vue.js", badge_color: "bg-green-500" },
+        { name: "Inertia", badge_color: "bg-purple-600" },
+        { name: "PostgreSQL", badge_color: "bg-blue-700" },
+      ],
+    },
+    {
+      name: "Jarvis Designs",
+      description:
+        "A custom e-commerce system tailored for sublimation businesses, featuring an AI-driven design generation tool powered by Python. This platform simplifies the creation of custom apparel and merchandise, offering a seamless experience from design concept to final product.",
+      image: "/img/projects/jarvis.png",
+      alt: "Jarvis Designs Project",
+      link: "https://jarvis-designs.it.com",
+      technologies_used: [
+        { name: "Vue.js", badge_color: "bg-green-500" },
+        { name: "Laravel", badge_color: "bg-red-600" },
+        { name: "Python", badge_color: "bg-yellow-600" },
+        { name: "PostgreSQL", badge_color: "bg-blue-700" },
+        { name: "Hugging Face", badge_color: "bg-yellow-600" },
+      ],
+    },
+    {
       name: "JoblyAI",
       description:
-        "An AI-powered job portal that streamlines job recommendations and applications using machine learning, integrated with modern React UI and scalable backend.",
+        "An AI-powered job portal that streamlines job recommendations and applications using Large Language Model, integrated with modern React UI and scalable backend.",
       image: "/img/projects/joblyai.png",
       alt: "JoblyAI Project",
       link: "https://jobly-ai-weld.vercel.app",
-      documentation_link: "https://joblyai-documentation.vercel.app",
+      secondary_link: "https://joblyai-documentation.vercel.app",
+      secondary_link_text: "View Documentation",
       technologies_used: [
-        { name: "React", badge_color: "bg-blue-600" },
-        { name: "Node.js", badge_color: "bg-green-600" },
-        { name: "Express", badge_color: "bg-gray-700" },
+        { name: "Next.js", badge_color: "bg-blue-600" },
+        { name: "Python", badge_color: "bg-yellow-600" },
         { name: "PostgreSQL", badge_color: "bg-blue-700" },
         { name: "OpenAI", badge_color: "bg-green-800" },
       ],
@@ -60,14 +91,14 @@ export default function Projects() {
               >
                 View Project &rarr;
               </a>
-              {project.documentation_link && (
+              {project.secondary_link && (
                 <a
-                  href={project.documentation_link}
+                  href={project.secondary_link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 font-semibold"
                 >
-                  View Documentation &rarr;
+                  {project.secondary_link_text} &rarr;
                 </a>
               )}
             </div>
