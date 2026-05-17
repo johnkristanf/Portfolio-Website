@@ -170,7 +170,7 @@ export default function Home() {
                     </h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div className="glass-effect p-8 rounded-2xl tech-card">
-                            <div className="text-4xl mb-4">⚛️</div>
+                            <div className="mb-4"><img src="/img/frontend-icon.svg" alt="Frontend" className="w-10 h-10" /></div>
                             <h3 className="text-2xl font-bold mb-4 text-violet-400">Frontend</h3>
                             <div className="space-y-3">
                                 <div className="flex items-center gap-9">
@@ -196,7 +196,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="glass-effect p-8 rounded-2xl tech-card">
-                            <div className="text-4xl mb-4">🔧</div>
+                            <div className="mb-4"><img src="/img/backend-icon.svg" alt="Backend" className="w-10 h-10" /></div>
                             <h3 className="text-2xl font-bold mb-4 text-violet-400">Backend</h3>
                             <div className="space-y-3">
                                 <div className="flex items-center space-x-3">
@@ -214,7 +214,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="glass-effect p-8 rounded-2xl tech-card">
-                            <div className="text-4xl mb-4">🗄️</div>
+                            <div className="mb-4"><img src="/img/database-icon.svg" alt="Database" className="w-10 h-10" /></div>
                             <h3 className="text-2xl font-bold mb-4 text-violet-400">Database</h3>
                             <div className="space-y-3">
                                 <div className="flex items-center space-x-3">
@@ -234,22 +234,11 @@ export default function Home() {
 
                         <div className="glass-effect p-8 rounded-2xl tech-card md:col-span-2 lg:col-span-3 ">
                             <div className="text-center">
-                                <div className="text-4xl mb-4">⚙️</div>
+                                <div className="mb-4 flex justify-center"><img src="/img/cloud-devops-icon.svg" alt="Cloud & DevOps" className="w-16 h-16" /></div>
                                 <h3 className="text-2xl font-bold mb-4 text-violet-400">
                                     Cloud & DevOps
                                 </h3>
-                                <div className="flex justify-center mb-6">
-                                    <div className="flex items-center space-x-3 bg-gradient-to-r from-orange-500 to-yellow-500 px-6 py-3 rounded-full">
-                                        <img
-                                            src="/img/aws-icon.png"
-                                            alt="AWS"
-                                            className="w-6 h-6"
-                                        />
-                                        <span className="font-semibold text-black">
-                                            Amazon Web Services (AWS)
-                                        </span>
-                                    </div>
-                                </div>
+                               
                                 <div className="flex flex-wrap justify-center gap-3 mt-4">
                                     <div className="bg-gray-800/50 px-4 py-2 rounded-lg border border-gray-700 flex items-center space-x-2">
                                         <img
@@ -259,14 +248,7 @@ export default function Home() {
                                         />
                                         <span className="text-sm text-gray-300">EC2</span>
                                     </div>
-                                    <div className="bg-gray-800/50 px-4 py-2 rounded-lg border border-gray-700 flex items-center space-x-2">
-                                        <img
-                                            src="/img/rds-icon.png"
-                                            alt="RDS"
-                                            className="w-4 h-4"
-                                        />
-                                        <span className="text-sm text-gray-300">RDS</span>
-                                    </div>
+                                    
                                     <div className="bg-gray-800/50 px-4 py-2 rounded-lg border border-gray-700 flex items-center space-x-2">
                                         <img src="/img/s3-icon.png" alt="S3" className="w-4 h-4" />
                                         <span className="text-sm text-gray-300">S3</span>
@@ -278,6 +260,14 @@ export default function Home() {
                                             className="w-4 h-4"
                                         />
                                         <span className="text-sm text-gray-300">Terraform</span>
+                                    </div>
+                                    <div className="bg-gray-800/50 px-4 py-2 rounded-lg border border-gray-700 flex items-center space-x-2">
+                                        <img
+                                            src="/img/supabase-icon.png"
+                                            alt="Supabase"
+                                            className="w-4 h-4"
+                                        />
+                                        <span className="text-sm text-gray-300">Supabase</span>
                                     </div>
                                     <div className="bg-gray-800/50 px-4 py-2 rounded-lg border border-gray-700 flex items-center space-x-2">
                                         <img

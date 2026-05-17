@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- cylinder body -->
+  <ellipse cx="12" cy="5" rx="8" ry="3" fill="#7c3aed" fill-opacity="0.4" stroke="#a78bfa"/>
+  <line x1="4" y1="5" x2="4" y2="19" stroke="#a78bfa"/>
+  <line x1="20" y1="5" x2="20" y2="19" stroke="#a78bfa"/>
+  <ellipse cx="12" cy="19" rx="8" ry="3" fill="#7c3aed" fill-opacity="0.4" stroke="#a78bfa"/>
+  <!-- middle ring lines -->
+  <path d="M4 10 Q12 13 20 10" stroke="#a78bfa" stroke-opacity="0.6" fill="none"/>
+  <path d="M4 14.5 Q12 17.5 20 14.5" stroke="#a78bfa" stroke-opacity="0.6" fill="none"/>
+</svg>

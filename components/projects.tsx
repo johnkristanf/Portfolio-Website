@@ -10,9 +10,8 @@ export default function Projects() {
       technologies_used: [
         { name: "Vue.js", badge_color: "bg-green-500" },
         { name: "Laravel", badge_color: "bg-red-600" },
-        { name: "Python", badge_color: "bg-yellow-600" },
+        { name: "AWS", badge_color: "bg-yellow-600" },
         { name: "PostgreSQL", badge_color: "bg-blue-700" },
-        { name: "Hugging Face", badge_color: "bg-yellow-600" },
       ],
     },
     {
