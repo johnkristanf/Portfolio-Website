@@ -7,7 +7,7 @@ export default function Navbar({
     setIsNavigating: Dispatch<SetStateAction<boolean>>
 }) {
     // Handle manual navigation clicks
-   
+
 
     return (
         <nav className="fixed top-0 w-full z-50 glass-effect">

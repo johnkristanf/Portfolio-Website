@@ -92,12 +92,12 @@ export default function Home() {
                             <span className="gradient-text">John Kristan Torremocha</span>
                         </h1>
                         <h2 className="text-2xl md:text-4xl font-semibold text-white mb-6">
-                            Software Engineer
+                            Full Stack Web Developer
                         </h2>
                     </div>
                     <p className="text-lg md:text-xl mb-8 text-gray-300 typing-animation max-w-2xl mx-auto">
-                        Passionate software engineer crafting innovative products with 1+
-                        year of web development experience and a portfolio of personal projects
+                        Passionate full stack web developer crafting innovative products with 2
+                        years of web development experience and a portfolio of projects
                     </p>
 
                     <div className="space-x-4">
@@ -143,7 +143,7 @@ export default function Home() {
                                 technologies, bringing ideas to life through clean, efficient code
                                 and intuitive user experiences. My journey in software development
                                 began with curiosity and has grown through hands-on experience
-                                building real-world applications. With a year of web development
+                                building real-world applications. With years of web development
                                 experience under my belt, I've learned to tackle challenges head-on
                                 and deliver solutions that make a meaningful impact.
                             </p>
@@ -154,8 +154,8 @@ export default function Home() {
                             </p>
                             <div className="flex space-x-4 pt-4">
                                 <div className="text-center">
-                                    <div className="text-3xl font-bold text-violet-400">1+</div>
-                                    <div className="text-sm text-gray-400">Year Experience</div>
+                                    <div className="text-3xl font-bold text-violet-400">2</div>
+                                    <div className="text-sm text-gray-400">Years Experience</div>
                                 </div>
                             </div>
                         </div>
