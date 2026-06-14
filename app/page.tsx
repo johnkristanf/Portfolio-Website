@@ -92,12 +92,12 @@ export default function Home() {
                             <span className="gradient-text">John Kristan Torremocha</span>
                         </h1>
                         <h2 className="text-2xl md:text-4xl font-semibold text-white mb-6">
-                            Full Stack Web Developer
+                            Software Engineer
                         </h2>
                     </div>
                     <p className="text-lg md:text-xl mb-8 text-gray-300 typing-animation max-w-2xl mx-auto">
-                        Passionate full stack web developer crafting innovative products with 2
-                        years of web development experience and a portfolio of projects
+                        Passionate software engineer crafting innovative products with 1+
+                        year of web development experience and a portfolio of projects
                     </p>
 
                     <div className="space-x-4">
@@ -154,8 +154,8 @@ export default function Home() {
                             </p>
                             <div className="flex space-x-4 pt-4">
                                 <div className="text-center">
-                                    <div className="text-3xl font-bold text-violet-400">2</div>
-                                    <div className="text-sm text-gray-400">Years Experience</div>
+                                    <div className="text-3xl font-bold text-violet-400">1+</div>
+                                    <div className="text-sm text-gray-400">Year Experience</div>
                                 </div>
                             </div>
                         </div>
